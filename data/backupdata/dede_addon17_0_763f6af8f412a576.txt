@@ -1,0 +1,6 @@
+INSERT INTO `dede_addon17` VALUES('82','19','','','127.0.0.1','/uploads/media/200706/1-200F61RZ5.mp4');
+INSERT INTO `dede_addon17` VALUES('83','19','','','127.0.0.1','/uploads/media/200706/1-200F61RZ5.mp4');
+INSERT INTO `dede_addon17` VALUES('84','19','','','127.0.0.1','/uploads/media/200706/1-200F61RZ5.mp4');
+INSERT INTO `dede_addon17` VALUES('85','19','','','127.0.0.1','/uploads/media/200706/1-200F61RZ5.mp4');
+INSERT INTO `dede_addon17` VALUES('86','19','','','127.0.0.1','/uploads/media/200706/1-200F61RZ5.mp4');
+INSERT INTO `dede_addon17` VALUES('87','19','','','127.0.0.1','/uploads/media/200706/1-200F61RZ5.mp4');

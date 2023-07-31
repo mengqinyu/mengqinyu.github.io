@@ -1,0 +1,313 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by 91084.com" />
+<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/skin/css/amazeui.min.css">
+<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/skin/css/app.css">
+<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/skin/css/layout.css">
+<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/skin/css/video.css">
+<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/skin/css/touch.css">
+<script src="{dede:global.cfg_cmspath/}/skin/js/qmtime.js"></script>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+		href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+	以获得更好的体验！</p>
+<![endif]--> 
+{dede:include filename="head.htm"/}
+<div class="content">
+  <div class="gsgg">
+    <div class="box">
+      <div class="gsggl l" id="pDate"> </div>
+      <div class="gsggr r">
+        <div class="gsggrl l">{dede:type typeid='8'}[field:typename/]{/dede:type} </div>
+        <div id="rollAD" style="height:60px; position:relative; width:450px;overflow:hidden;">
+          <div id="rollText"> {dede:arclist typeid='8'  titlelen='20' orderby='pubdate'}
+            <div class="gsggrr"><a style="display: block; height: 60px; line-height: 60px" href="[field:arcurl/]">· [field:title/] <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a></div>
+            {/dede:arclist} </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="contenta">
+      <div class="contental l">
+        <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+          <ul class="am-slides">
+            {dede:arclist row='4' titlelen='32' flag='f'}
+            <li> <a href="[field:arcurl/]"> <img src="[field:picname/]"/> <span class="contentalt">[field:title/] <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></span> <span class="wzzz"></span> </a> </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      {dede:channelartlist typeid='6,6'}
+      <div class="contentar r">
+        <div class="contentart">
+          <div class="contentartl l">
+            <div class="bt">{dede:field name='typename'/}</div>
+          </div>
+          <div class="contentartr r"><a href="{dede:field name='typeurl'/}">更多</a></div>
+        </div>
+        <div class="contentarb">
+          <div class="contentarbt"> {dede:arclist limit='0,1' titlelen='60' orderby='pubdate'} <a href="[field:arcurl/]">
+            <div class="contentarbtt">[field:title/]</div>
+            <div class="contentarbtb">[field:description function="cn_substr(@me,160)"/]... <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </div>
+            </a> {/dede:arclist} </div>
+          <div class="contentarbb">
+            <ul>
+              {dede:arclist limit='1,4' titlelen='60' orderby='pubdate'}
+              <li> <a href="[field:arcurl/]"> <span class="contentarbbl l">[field:title/]</span> <span class="contentarbbr r">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </a> </li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/dede:channelartlist} </div>
+    <div class="contentb"> <img src="{dede:global.cfg_cmspath/}/skin/images/add1.jpg"/> </div>
+    <div class="contentb_touch"> <img src="{dede:global.cfg_cmspath/}/skin/images/add1.jpg"/> </div>
+    <div class="contentc">
+      <div class="contentcl l">
+        <div class="contentclt"> {dede:channelartlist typeid='10,10'}
+          <div class="contentcltl l">
+            <div class="contentarts">
+              <div class="contentartls l">
+                <div class="bt">{dede:field name='typename'/}</div>
+              </div>
+              <div class="contentartrs r"><a href="{dede:field name='typeurl'/}">更多</a></div>
+            </div>
+            <div class="contentcltb">
+              <ul>
+                {dede:arclist row='7' titlelen='40' orderby='pubdate'}
+                <li> <a href="[field:arcurl/]"> <span class="contentcltbl l">[field:title/]</span> <span class="contentcltbr r">([field:pubdate function="MyDate('m-d',@me)"/])</span> </a> </li>
+                {/dede:arclist}
+              </ul>
+            </div>
+          </div>
+          {/dede:channelartlist} 
+          {dede:channelartlist typeid='11,11'}
+          <div class="contentcltl r">
+            <div class="contentarts">
+              <div class="contentartls l">
+                <div class="bt">{dede:field name='typename'/}</div>
+              </div>
+              <div class="contentartrs r"><a href="{dede:field name='typeurl'/}">更多</a></div>
+            </div>
+            <div class="contentcltb">
+              <ul>
+                {dede:arclist row='7' titlelen='40' orderby='pubdate'}
+                <li> <a href="[field:arcurl/]"> <span class="contentcltbl l">[field:title/]</span> <span class="contentcltbr r">([field:pubdate function="MyDate('m-d',@me)"/])</span> </a> </li>
+                {/dede:arclist}
+              </ul>
+            </div>
+          </div>
+          {/dede:channelartlist} </div>
+        <div class="contentclt"> {dede:channelartlist typeid='12,12'}
+          <div class="contentcltl l">
+            <div class="contentarts">
+              <div class="contentartls l">
+                <div class="bt">{dede:field name='typename'/}</div>
+              </div>
+              <div class="contentartrs r"><a href="{dede:field name='typeurl'/}">更多</a></div>
+            </div>
+            <div class="contentcltb">
+              <ul>
+                {dede:arclist row='7' titlelen='40' orderby='pubdate'}
+                <li> <a href="[field:arcurl/]"> <span class="contentcltbl l">[field:title/]</span> <span class="contentcltbr r">([field:pubdate function="MyDate('m-d',@me)"/])</span> </a> </li>
+                {/dede:arclist}
+              </ul>
+            </div>
+          </div>
+          {/dede:channelartlist}
+          
+          {dede:channelartlist typeid='13,13'}
+          <div class="contentcltl r">
+            <div class="contentarts">
+              <div class="contentartls l">
+                <div class="bt">{dede:field name='typename'/}</div>
+              </div>
+              <div class="contentartrs r"><a href="{dede:field name='typeurl'/}">更多</a></div>
+            </div>
+            <div class="contentcltb">
+              <ul>
+                {dede:arclist row='7' titlelen='40' orderby='pubdate'}
+                <li> <a href="[field:arcurl/]"> <span class="contentcltbl l">[field:title/]</span> <span class="contentcltbr r">([field:pubdate function="MyDate('m-d',@me)"/])</span> </a> </li>
+                {/dede:arclist}
+              </ul>
+            </div>
+          </div>
+          {/dede:channelartlist} </div>
+        <div class="contentcls"> <img src="{dede:global.cfg_cmspath/}/skin/images/add2.jpg"/> </div>
+        <div class="contentcls_touch"> <img src="{dede:global.cfg_cmspath/}/skin/images/add2.jpg"/> </div>
+        <div class="contentclt"> {dede:channelartlist typeid='15,15'}
+          <div class="contentcltl l">
+            <div class="contentarts">
+              <div class="contentartls l">
+                <div class="bt">{dede:field name='typename'/}</div>
+              </div>
+              <div class="contentartrs r"><a href="{dede:field name='typeurl'/}">更多</a></div>
+            </div>
+            <div class="contentcltb">
+              <ul>
+                {dede:arclist row='7' titlelen='40' orderby='pubdate'}
+                <li> <a href="[field:arcurl/]"> <span class="contentcltbl l">[field:title/]</span> <span class="contentcltbr r">([field:pubdate function="MyDate('m-d',@me)"/])</span> </a> </li>
+                {/dede:arclist}
+              </ul>
+            </div>
+          </div>
+          {/dede:channelartlist}
+          
+          
+          {dede:channelartlist typeid='16,16'}
+          <div class="contentcltl r">
+            <div class="contentarts">
+              <div class="contentartls l">
+                <div class="bt">{dede:field name='typename'/}</div>
+              </div>
+              <div class="contentartrs r"><a href="{dede:field name='typeurl'/}">更多</a></div>
+            </div>
+            <div class="contentcltb">
+              <ul>
+                {dede:arclist row='7' titlelen='40' orderby='pubdate'}
+                <li> <a href="[field:arcurl/]"> <span class="contentcltbl l">[field:title/]</span> <span class="contentcltbr r">([field:pubdate function="MyDate('m-d',@me)"/])</span> </a> </li>
+                {/dede:arclist}
+              </ul>
+            </div>
+          </div>
+          {/dede:channelartlist} </div>
+      </div>
+      <div class="contentcr r">
+        <div class="contentcrt">
+          <div class="contentarts">
+            <div class="contentartls l"> {dede:type typeid='1'}
+              <div class="bt">[field:typename/]</div>
+              {/dede:type} </div>
+            <!--<div class="contentartr r"><a href="[field:typelink/]">更多</a></div>--> 
+          </div>
+          <div class="contentcrtb">
+            <div class="contentcrtbt"> <a href="javascript:;"><img src="{dede:global.cfg_cmspath/}/skin/images/jrnwbg.jpg"/></a> </div>
+            <div class="contentcrtbb">
+              <ul>
+                {dede:type typeid='2'}
+                <li> <a href="[field:typelink/]"> <span class="contentcrtbbt"><img src="[field:global.cfg_cmspath/]/skin/images/dwtb.png"/></span> <span class="contentcrtbbb">[field:typename/]</span> </a> </li>
+                {/dede:type} 
+                {dede:type typeid='3'}
+                <li style="float: right"> <a href="[field:typelink/]"> <span class="contentcrtbbt"><img src="[field:global.cfg_cmspath/]/skin/images/dwtb2.png"/></span> <span class="contentcrtbbb">[field:typename/]</span> </a> </li>
+                {/dede:type}
+                {dede:type typeid='4'}
+                <li> <a href="[field:typelink/]"> <span class="contentcrtbbt"><img src="[field:global.cfg_cmspath/]/skin/images/dwtb3.png"/></span> <span class="contentcrtbbb">[field:typename/]</span> </a> </li>
+                {/dede:type}
+                {dede:type typeid='20'}
+                <li style="float: right"> <a href="[field:typelink/]"> <span class="contentcrtbbt"><img src="[field:global.cfg_cmspath/]/skin/images/dwtb4.png"/></span> <span class="contentcrtbbb">[field:typename/]</span> </a> </li>
+                {/dede:type} 
+                {dede:type typeid='5'}
+                <li> <a href="[field:typelink/]"> <span class="contentcrtbbt"><img src="[field:global.cfg_cmspath/]/skin/images/dwtb5.png"/></span> <span class="contentcrtbbb">[field:typename/]</span> </a> </li>
+                {/dede:type} 
+                {dede:type typeid='1'}
+                <li style="float: right"> <a href="[field:typelink/]"> <span class="contentcrtbbt"><img src="[field:global.cfg_cmspath/]/skin/images/dwtb6.png"/></span> <span class="contentcrtbbb">了解更多</span> </a> </li>
+                {/dede:type}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="contentcrb">
+          <div class="contentarts">
+            <div class="contentartls l">
+              <div class="bt">专题专栏</div>
+            </div>
+            <!--<div class="contentartr r"><a href="#">更多</a></div>--> 
+          </div>
+          <div class="contentcrbs">
+            <div class="contentcrbst"><a href="javascript:;"><img src="{dede:global.cfg_cmspath/}/skin/images/zt1.jpg"/></a></div>
+            <div class="contentcrbst"><a href="javascript:;"><img src="{dede:global.cfg_cmspath/}/skin/images/zt2.jpg"/></a></div>
+            <div class="contentcrbst"><a href="javascript:;"><img src="{dede:global.cfg_cmspath/}/skin/images/zt3.jpg"/></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentd"> <img src="{dede:global.cfg_cmspath/}/skin/images/add3.jpg"/> </div>
+    <div class="contentd_touch"> <img src="{dede:global.cfg_cmspath/}/skin/images/add3.jpg"/> </div>
+    <div class="contente">
+      <div class="contentel l">
+        <div class="contentarts">
+          <div class="contentartls l">
+            <div class="bt">宣传短片</div>
+          </div>
+          <div class="contentartr r">{dede:type typeid='19'} <a href="[field:typelink/]">更多</a>{/dede:type} </div>
+        </div>
+        
+        {dede:arclist typeid='19' row='1' addfields='video' channelid='17'}
+        <div class="contentelb m-video" data-src="[field:video/]"> <img src="[field:global.cfg_cmspath/]/skin/images/shpin.jpg" alt="[field:title/]"> </div>
+        {/dede:arclist}
+        
+      </div>
+      {dede:channelartlist typeid='5,5'}
+      <div class="contenter l">
+        <div class="contentartst">
+          <div class="contentartls l">
+            <div class="bt">{dede:field name='typename'/}</div>
+          </div>
+          <div class="contentartr r"><a href="{dede:field name='typeurl'/}">更多</a></div>
+        </div>
+        <div class="contenterb">
+          <div class="am-slider am-slider-default am-slider-carousel" data-am-flexslider="{itemWidth: 249, itemMargin: 20.5, slideshow: true}">
+            <ul class="am-slides">
+              {dede:arclist titlelen='40' orderby='pubdate'}
+              <li>
+                <figure data-am-widget="figure" class="am am-figure am-figure-default " data-am-figure="{pureview: 'true'}"> <img src="[field:picname/]" data-rel="[field:picname/]" alt="[field:title/]"/> </figure>
+              </li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+        <div class="contenterb contenterb_touch">
+          <div class="am-slider am-slider-default am-slider-carousel" data-am-flexslider="{itemWidth: 320, itemMargin: 20, slideshow: true}">
+            <ul class="am-slides">
+              {dede:arclist titlelen='40' orderby='pubdate'}
+              <li>
+                <figure data-am-widget="figure" class="am am-figure am-figure-default " data-am-figure="{pureview: 'true'}"> <img src="[field:picname/]" data-rel="[field:picname/]" alt="[field:title/]"/> </figure>
+              </li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/dede:channelartlist} </div>
+    {dede:channelartlist typeid='14,14'}
+    <div class="contentf">
+      <div class="contentartsb">
+        <div class="contentartls l">
+          <div class="bt">{dede:field name='typename'/}</div>
+        </div>
+        <div class="contentartr r"><a href="{dede:field name='typeurl'/}">更多</a></div>
+      </div>
+      <div class="contentfb">
+        <div class="am-slider am-slider-default am-slider-carousel" data-am-flexslider="{itemWidth: 282, itemMargin: 30, slideshow: true}">
+          <ul class="am-slides">
+            {dede:arclist titlelen='40' orderby='pubdate'}
+            <li> <a href="[field:arcurl/]"> <span class="contentfbt">[field:title/]</span> <img src="[field:picname/]"> </a> </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <div class="contentfb contentfb_touch">
+        <div class="am-slider am-slider-default am-slider-carousel" data-am-flexslider="{itemWidth: 320, itemMargin: 20, slideshow: true}">
+          <ul class="am-slides">
+            {dede:arclist titlelen='40' orderby='pubdate'}
+            <li> <a href="[field:arcurl/]"> <span class="contentfbt">[field:title/]</span> <img src="[field:picname/]"> </a> </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {/dede:channelartlist} </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -1,0 +1,6 @@
+INSERT INTO `dede_flink` VALUES('2','2','https://www.91084.com/','织梦模板','','','','1226375403','1','2');
+INSERT INTO `dede_flink` VALUES('3','1','https://www.gezhancn.com/','企业网站建设','','','','1599391636','1','2');
+INSERT INTO `dede_flink` VALUES('4','3','https://bbs.91084.com/','站长论坛','','','','1599391661','1','2');
+INSERT INTO `dede_flink` VALUES('5','4','https://www.yingzicms.com/','网站建设','','','','1599391676','1','2');
+INSERT INTO `dede_flink` VALUES('6','5','https://www.dns.la/','智能DNS','','','','1599391696','1','2');
+INSERT INTO `dede_flink` VALUES('7','6','https://www.jiaxunjie.com/','开封家电清洗','','','','1599391794','1','2');

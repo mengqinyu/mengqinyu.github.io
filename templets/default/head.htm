@@ -1,0 +1,69 @@
+<div class="header">
+  <div class="box"> <a href="{dede:global.cfg_cmspath/}/"><img src="{dede:global.cfg_cmspath/}/skin/images/logo.png" alt="{dede:global.cfg_webname/}"></a> </div>
+</div>
+<div class="nav">
+  <div class="box">
+    <div class="navl l"><a href="{dede:global.cfg_cmspath/}/"><img src="{dede:global.cfg_cmspath/}/skin/images/syico1.png" alt="{dede:global.cfg_webname/}"></a></div>
+    <div class="navs l">
+      <ul>
+        {dede:channelartlist typeid='top' row='8'}
+        <li> <a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+          <ul class="erji">
+            {dede:channel type='son' noself='yes'}
+            <li> <a href="[field:typeurl/]">[field:typename/]</a> </li>
+            {/dede:channel}
+          </ul>
+        </li>
+        {/dede:channelartlist}
+      </ul>
+    </div>
+    <div class="navr r">
+      <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+        <input type="hidden" name="kwtype" value="0"/>
+        <input class="serch_inputa" name="q" type="text" placeholder="请输入关键字查询">
+        <input class="serch_inputb" type="submit">
+      </form>
+    </div>
+  </div>
+</div>
+<div id="chbnav_touch" class="c">
+  <div class="chbnav_touch_top c">
+    <div class="chbnav_touch_top_list c">
+      <div class="chbnav_touch_top_list_a chbnav_touch_top_list_c c"></div>
+      <div class="chbnav_touch_top_list_a chbnav_touch_top_list_b c"></div>
+      <div class="chbnav_touch_top_list_a c"></div>
+    </div>
+    <a href="{dede:global.cfg_cmspath/}/">
+    <div class="chbnav_touch_top_logo c"> <img src="{dede:global.cfg_cmspath/}/skin/images/logo2.png" alt="{dede:global.cfg_webname/}"> </div>
+    </a> </div>
+  <div class="chbnav_touch_nav c">
+    <div class="chbnav_touch_nav_box c">
+      <div class="chbnav_touch_nav_title c">
+        <div class="chbnav_touch_navli chbnav_touch_navli1 c"> <a href="{dede:global.cfg_cmspath/}/"><span>网站首页</span></a> <img style="width: 20px;" src="{dede:global.cfg_cmspath/}/skin/images/touch_cha.png"/> </div>
+        {dede:channelartlist typeid='top' row='8'}
+        <div class="chbnav_touch_navli chbnav_touch_navli2 c"> <a href="{dede:field name='typeurl'/}"><span>{dede:field name='typename'/}</span></a> {dede:field name=typeid runphp="yes"}
+          global $dsql;
+          $sql = "SELECT id From `dede_arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";   
+          $row = $dsql->GetOne($sql);      
+          @me=is_array($row)?'<span class="chbnav_touch_navli2_img"><img src="/skin/images/nav_li1jt.png"/></span>':'';
+          {/dede:field}
+          {dede:php}
+          $id = $refObj->Fields['id'];
+          $sql = ("SELECT * FROM dede_arctype where reid ='$id'");
+          $db->SetQuery($sql);
+          $db->Execute();
+          if($db->GetTotalRow()){
+          echo '
+          <div class="chbnav_touch_erji c"> ';
+            while($row = $db->GetArray()){
+            $url = str_replace('{cmspath}','',($row[typedir]));
+            echo "<a href=".$url.">".($row[typename])."</a>";
+            };
+            echo '</div>
+          ';
+          };
+          {/dede:php} </div>
+        {/dede:channelartlist} </div>
+    </div>
+  </div>
+</div>
